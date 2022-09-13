@@ -44,7 +44,7 @@ public class MainController {
 			@RequestParam(value = "page", defaultValue = "1") int page) {
 		final int maxResult = 5;//khai báo số dòng dữ liệu tối đa cho 1 page
 		PaginationResult<ProductInfo> productInfos = productDAO.getAllProductInfos(page, maxResult, likeName);
-
+		System.out.println("abc");
 		model.addAttribute("paginationProductInfos", productInfos);
 		return "productList";
 	}
